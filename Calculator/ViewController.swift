@@ -24,6 +24,8 @@ class ViewController: UIViewController {
             }
             return number
             
+        }set{
+            displayLabel.text = String(newValue)
         }
     }
     
@@ -38,15 +40,14 @@ class ViewController: UIViewController {
         
         if let  calcMethod = sender.currentTitle{
             if calcMethod == "+/-"{
-                displayLabel.text = String(displayValue * -1)
-                
+                displayValue = displayValue * -1
             }
             
            else if calcMethod == "AC"{
                 displayLabel.text = String(0)
             }
            else if calcMethod == "%"{
-                displayLabel.text = String(displayValue * 0.01)
+                displayValue = displayValue * 0.01
             }
         }
         
